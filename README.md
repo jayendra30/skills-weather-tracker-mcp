@@ -76,6 +76,15 @@ npm run stats -- "London"
 The CLI stores observations in the repository's `weather.db` using the existing
 `weather_logs` schema and retrieves data from Open-Meteo without an API key.
 
+Start the web dashboard with:
+
+```sh
+npm start
+```
+
+Then open [http://localhost:3000](http://localhost:3000). The dashboard shows
+the latest saved observations, per-city summaries, and a temperature chart.
+
 ---
 
 © 2026 • [MIT License](LICENSE)
