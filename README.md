@@ -51,6 +51,31 @@ You ──prompt──▶ Copilot Agent Mode
 - Use a **public** repository so Actions minutes are free.
 - If the issue doesn't appear in 20 seconds, check the **Actions** tab for a running or failed job.
 
+## Weather tracker CLI
+
+Install the dependencies, then use the CLI to add live observations, list recent
+logs, or summarize a city's temperature history:
+
+```sh
+npm install
+node src/cli.js add "London"
+node src/cli.js add "Tokyo"
+node src/cli.js list
+node src/cli.js list --limit 5
+node src/cli.js stats "London"
+```
+
+Equivalent npm scripts are available:
+
+```sh
+npm run add -- "London"
+npm run list -- --limit 5
+npm run stats -- "London"
+```
+
+The CLI stores observations in the repository's `weather.db` using the existing
+`weather_logs` schema and retrieves data from Open-Meteo without an API key.
+
 ---
 
 © 2026 • [MIT License](LICENSE)
